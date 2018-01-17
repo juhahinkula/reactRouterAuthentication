@@ -48,30 +48,38 @@ class Login extends Component {
     }
 
     return (
-      <div className="container">
-        <h2 className="text-center">Login Form</h2>
-        <div className="form-signin">
-        <div className="col-md-6">
-        <div className="row">
-          <input 
-            type="email" className="form-control" style={{margin: "10px"}} placeholder='email@domain.com'
-            name="email" onChange={this.handleChange}
-          />
-        </div>
-        <div className="row">
-          <input 
-            style={{margin: "10px"}} className="form-control" type='Password'
-            name="password" onChange={this.handleChange}
-          />
-        </div>
-        <div className="row">
-          <button onClick={this.onLoginClick} className="btn btn-primary">Login</button>
-        </div>
-        </div>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-12">
+          <h2 class="text-center text-white mb-4">Login Form</h2>
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <span class="anchor" id="formLogin"></span>
+                <div class="card rounded-0">
+                  <div class="card-header">
+                    <h3 class="mb-0">Login</h3>
+                  </div>
+                  <div class="card-body">
+                    <form class="form" role="form" autocomplete="off" id="formLogin">
+                      <div class="form-group">
+                        <label for="uname1">Email</label>
+                        <input type="text" class="form-control form-control-lg rounded-0"  name="email" onChange={this.handleChange} placeholder='email@domain.com' />
+                      </div>
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-lg rounded-0" name="password" onChange={this.handleChange} />
+                      </div>
+                        <button type="button" onClick={this.onLoginClick} class="btn btn-success btn-lg float-right">Login</button>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <ToastContainer />
-        </div>
-      );
+      </div>      
+    );
   }
 }
 

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Contact extends Component {
-  render() { 
+  render() {
     return (
       <div>
         <h2>This is contact page...Available only for authenticated users.</h2>
