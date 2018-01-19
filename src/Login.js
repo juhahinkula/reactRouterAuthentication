@@ -31,7 +31,7 @@ class Login extends Component {
             });
            })
           .catch(() => {
-            toast.warn("Could not login. Check your email and password.", {
+            toast.error("Could not login. Check your email and password.", {
               position: toast.POSITION.TOP_RIGHT
             });           
           });
