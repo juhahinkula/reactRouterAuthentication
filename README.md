@@ -4,3 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Install packages: npm install OR yarn
 - Create Firebase project with authentication
 - Modify config.js with your own firebase settings
+- Run the application: npm start OR yarn start
