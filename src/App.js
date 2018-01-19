@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Route, Switch, Redirect } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Shop from './Shop';
@@ -47,7 +46,7 @@ class App extends Component {
           <Navigator isAuthenticated={this.state.isAuthenticated} />
           <Switch>
               <Route path="/login" component={Login} />
-              <Route exact path="/home" component={Home} />
+              <Route exact path="/" component={Home} />
               <PrivateRoute isAuthenticated={this.state.isAuthenticated} path="/contact" component={Contact} />
               <PrivateRoute isAuthenticated={this.state.isAuthenticated} path="/shop" component={Shop} />
               <Route render={() => <h1>Page not found</h1>} />
