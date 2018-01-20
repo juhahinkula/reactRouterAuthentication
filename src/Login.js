@@ -6,6 +6,21 @@ import { Redirect } from 'react-router-dom';
 class Login extends Component {
   state = { email: '', password: '', redirect: false};
 
+  resetPassword = (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    firebaseAuth().sendPasswordResetEmail(email).then(function() {
+      toast.success("Password reset email sent.", {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }).catch(function(error) {
+      toast.error("Error in resetting password. Type your email to email field.", {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    });    
+  }
+
   onLoginClick = (event) => {
     event.preventDefault();
 
@@ -48,28 +63,29 @@ class Login extends Component {
     }
 
     return (
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-12">
-          <h2 class="text-center text-white mb-4">Login Form</h2>
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <span class="anchor" id="formLogin"></span>
-                <div class="card rounded-0">
-                  <div class="card-header">
-                    <h3 class="mb-0">Login</h3>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-12">
+          <h2 className="text-center text-white mb-4">Login Form</h2>
+            <div className="row">
+              <div className="col-md-6 mx-auto">
+                <span className="anchor" id="formLogin"></span>
+                <div className="card rounded-0">
+                  <div className="card-header">
+                    <h3 className="mb-0">Login</h3>
                   </div>
-                  <div class="card-body">
-                    <form class="form" role="form" autocomplete="off" id="formLogin">
-                      <div class="form-group">
-                        <label for="uname1">Email</label>
-                        <input type="text" class="form-control form-control-lg rounded-0"  name="email" onChange={this.handleChange} placeholder='email@domain.com' />
+                  <div className="card-body">
+                    <form className="form" role="form" id="formLogin">
+                      <div className="form-group">
+                        <label>Email</label>
+                        <input type="text" id="email" className="form-control form-control-lg rounded-0"  name="email" onChange={this.handleChange} placeholder='email@domain.com' />
                       </div>
-                      <div class="form-group">
+                      <div className="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control form-control-lg rounded-0" name="password" onChange={this.handleChange} />
+                        <input type="password" className="form-control form-control-lg rounded-0" name="password" onChange={this.handleChange} />
                       </div>
-                        <button type="button" onClick={this.onLoginClick} class="btn btn-success btn-lg float-right">Login</button>
+                        <button onClick={this.resetPassword} className="btn btn-link float-left">Forgot password?</button>
+                        <button onClick={this.onLoginClick} className="btn btn-success btn-lg float-right">Login</button>
                       </form>
                   </div>
                 </div>
