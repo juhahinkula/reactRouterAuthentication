@@ -5,3 +5,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Create Firebase project with authentication
 - Modify config.js with your own firebase settings
 - Run the application: npm start OR yarn start
+
+
+![Screenshot](http://juhahinkula.github.com/img/react_router.png)
