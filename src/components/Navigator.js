@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { firebaseAuth } from './config';
+import { firebaseAuth } from '../config';
 
 class Navigator extends Component {
   logout = () => {

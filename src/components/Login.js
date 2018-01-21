@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { firebaseAuth } from './config';
+import { firebaseAuth } from '../config';
 import { ToastContainer, toast } from 'react-toastify';
 import { Redirect } from 'react-router-dom';
 

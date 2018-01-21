@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
-import Home from './Home';
-import Shop from './Shop';
-import Contact from './Contact';
-import Navigator from './Navigator';
-import Login from './Login';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import Contact from './components/Contact';
+import Navigator from './components/Navigator';
+import Login from './components/Login';
 import { firebaseAuth } from './config';
 
 const PrivateRoute = ({ component: Component, ...rest, isAuthenticated }) => (
