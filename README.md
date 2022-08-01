@@ -7,4 +7,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Run the application: npm start OR yarn start
 
 
-![Screenshot](http://juhahinkula.github.com/img/react_router.png)
+![Screenshot](https://github.com/juhahinkula/juhahinkula.github.io/blob/master/img/react_router.png)
